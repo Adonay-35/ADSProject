@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PPgiYpEPo84XnYhQceojXwT7oVaedVHzio6ExJ9EIpjNux9uXrsTAw+RhXozrn2CMnrGDcNsr1nXzh1ZkVp5CA==",
+  "dgSpecHash": "xUFWG9Jx9/kZsxv2mAAFKuO5/zD5tyEowPQ8wzxlKu+EJILp6bkK3f17mLr2Y73hSB//idBAqGK/kiDfHywKAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\ADSProject\\ADSProject\\ADSProject.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\Primer Ciclo Cuarto Año\\Lab Analisis de Sistemas\\ADSProject\\ADSProject\\ADSProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

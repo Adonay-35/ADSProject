@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\ADSProject",
-    "\\ADSProject\\Controllers"
+    "\\ADSProject\\Controllers",
+    "\\ADSProject\\Repositories"
   ],
-  "SelectedNode": "\\ADSProject\\Program.cs",
+  "SelectedNode": "\\ADSProject.sln",
   "PreviewInSolutionExplorer": false
 }

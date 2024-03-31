@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\ADSProject\\ADSProject\\ADSProject.csproj": {}
+    "C:\\Users\\HP\\Desktop\\Primer Ciclo Cuarto Año\\Lab Analisis de Sistemas\\ADSProject\\ADSProject\\ADSProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\ADSProject\\ADSProject\\ADSProject.csproj": {
+    "C:\\Users\\HP\\Desktop\\Primer Ciclo Cuarto Año\\Lab Analisis de Sistemas\\ADSProject\\ADSProject\\ADSProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\ADSProject\\ADSProject\\ADSProject.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Primer Ciclo Cuarto Año\\Lab Analisis de Sistemas\\ADSProject\\ADSProject\\ADSProject.csproj",
         "projectName": "ADSProject",
-        "projectPath": "C:\\Users\\HP\\Desktop\\ADSProject\\ADSProject\\ADSProject.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\Primer Ciclo Cuarto Año\\Lab Analisis de Sistemas\\ADSProject\\ADSProject\\ADSProject.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\ADSProject\\ADSProject\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\Primer Ciclo Cuarto Año\\Lab Analisis de Sistemas\\ADSProject\\ADSProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
