@@ -23,7 +23,11 @@ namespace ADSProject.Controllers
             {
                 try
                 {
-                    int contador = this.materia.AgregarMateria(materia);
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+                int contador = this.materia.AgregarMateria(materia);
 
                     if (contador > 0)
                     {
@@ -50,7 +54,11 @@ namespace ADSProject.Controllers
             {
                 try
                 {
-                    int contador = this.materia.ActualizarMateria(idMateria, materia);
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+                int contador = this.materia.ActualizarMateria(idMateria, materia);
                     if (contador > 0)
                     {
                         pCodRespuesta = Constans.COD_EXITO;
