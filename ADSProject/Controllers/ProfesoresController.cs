@@ -24,7 +24,11 @@ namespace ADSProject.Controllers
             {
                 try
                 {
-                    int contador = this.profesor.AgregarProfesor(profesor);
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+                int contador = this.profesor.AgregarProfesor(profesor);
 
                     if (contador > 0)
                     {
@@ -51,7 +55,11 @@ namespace ADSProject.Controllers
             {
                 try
                 {
-                    int contador = this.profesor.ActualizarProfesor(idProfesor, profesor);
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+                int contador = this.profesor.ActualizarProfesor(idProfesor, profesor);
                     if (contador > 0)
                     {
                         pCodRespuesta = Constans.COD_EXITO;
