@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ADSProject.Models
 {
+    [PrimaryKey(nameof(Id))]
+
     public class Materia
     {
         public int Id { get; set; }
