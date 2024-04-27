@@ -1,24 +1,36 @@
-﻿using ADSProject.Interfaces;
+﻿using ADSProject.DB;
+using ADSProject.Interfaces;
 using ADSProject.Models;
 
 namespace ADSProject.Repositories
 {
     public class MateriaRepository : IMateria
     {
-        private List<Materia> lstMaterias = new List<Materia>
-        {
-            new Materia{ Id = 1, Nombre = "Desarrollo de Software"
-            }
-        };
+        //private List<Materia> lstMaterias = new List<Materia>
+        //{
+        //    new Materia{ Id = 1, Nombre = "Desarrollo de Software"
+        //    }
+        //};
 
-        public int ActualizarMateria(int idMateria, Materia Materia)
+        private readonly ApplicationDbContext applicationDbContext;
+
+        public MateriaRepository(ApplicationDbContext applicationDbContext)
+        {
+            this.applicationDbContext = applicationDbContext;
+        }
+        public int ActualizarMateria(int idMateria, Materia materia)
         {
             try
             {
-                int indice = lstMaterias.FindIndex(tmp => tmp.Id == idMateria);
+                //int indice = lstMaterias.FindIndex(tmp => tmp.Id == idMateria);
 
-                lstMaterias[indice] = Materia;
+                //lstMaterias[indice] = Materia;
 
+                //return idMateria;
+
+                var item = applicationDbContext.Materias.SingleOrDefault(x => x.Id == idMateria);
+                applicationDbContext.Entry(item).CurrentValues.SetValues(materia);
+                applicationDbContext.SaveChanges();
                 return idMateria;
             }
             catch (Exception)
@@ -31,12 +43,17 @@ namespace ADSProject.Repositories
         {
             try
             {
-                if (lstMaterias.Count > 0)
-                {
-                    materia.Id = lstMaterias.Last().Id + 1;
-                }
+                //if (lstMaterias.Count > 0)
+                //{
+                //    materia.Id = lstMaterias.Last().Id + 1;
+                //}
 
-                lstMaterias.Add(materia);
+                //lstMaterias.Add(materia);
+
+                //return materia.Id;
+
+                applicationDbContext.Materias.Add(materia);
+                applicationDbContext.SaveChanges();
 
                 return materia.Id;
             }
@@ -50,10 +67,15 @@ namespace ADSProject.Repositories
         {
             try
             {
-                int indice = lstMaterias.FindIndex(tmp => tmp.Id == idMateria);
+                //int indice = lstMaterias.FindIndex(tmp => tmp.Id == idMateria);
 
-                lstMaterias.RemoveAt(indice);
+                //lstMaterias.RemoveAt(indice);
 
+                //return true;
+
+                var item = applicationDbContext.Materias.SingleOrDefault(x => x.Id == idMateria);
+                applicationDbContext.Materias.Remove(item);
+                applicationDbContext.SaveChanges();
                 return true;
             }
             catch (Exception)
@@ -66,7 +88,10 @@ namespace ADSProject.Repositories
         {
             try
             {
-                Materia materia = lstMaterias.FirstOrDefault(tmp => tmp.Id == idMateria);
+                //Materia materia = lstMaterias.FirstOrDefault(tmp => tmp.Id == idMateria);
+                //return materia;
+
+                var materia = applicationDbContext.Materias.SingleOrDefault(x => x.Id == idMateria);
                 return materia;
             }
             catch (Exception)
@@ -79,7 +104,9 @@ namespace ADSProject.Repositories
         {
             try
             {
-                return lstMaterias;
+                //return lstMaterias;
+
+                return applicationDbContext.Materias.ToList();
             }
             catch (Exception)
             {
